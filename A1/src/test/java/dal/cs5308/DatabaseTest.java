@@ -12,7 +12,7 @@ public class DatabaseTest {
     private IDatabase database;
 
     @Before
-    public void beforeAll() {
+    public void testSetup() {
         database = new MockDatabase();
     }
 
@@ -27,7 +27,7 @@ public class DatabaseTest {
     }
 
     @After
-    public void afterAll() {
+    public void testTeardown() {
         database = null;
     }
 }

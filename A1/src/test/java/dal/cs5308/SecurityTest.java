@@ -12,7 +12,7 @@ public class SecurityTest {
     private ISecurity security;
 
     @Before
-    public void beforeAll() {
+    public void testSetup() {
         security = new MockSecurity();
     }
 
@@ -37,7 +37,7 @@ public class SecurityTest {
     }
 
     @After
-    public void afterAll() {
+    public void testTeardown() {
         security = null;
     }
 }
