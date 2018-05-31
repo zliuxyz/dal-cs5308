@@ -1,1 +1,1 @@
-# Assignment 1 of CSCI 5308 - Quality Assurance
+# Assignment 1
