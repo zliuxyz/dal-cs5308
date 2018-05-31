@@ -1,7 +1,7 @@
 package dal.cs5308;
 
 
-public interface PARTMANAGER {
+public interface IPARTMANAGER {
 
     enum PartResponse {
         SUCCESS,
