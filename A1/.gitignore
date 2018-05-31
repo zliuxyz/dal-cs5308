@@ -62,3 +62,7 @@ fabric.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
+
+# Ignore pdf or txt files
+*.pdf
+*.txt
