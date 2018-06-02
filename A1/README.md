@@ -15,7 +15,7 @@ Maven: Model version - 4.0.0
 ## Instructions to build and test
 To get the repository: `git clone https://github.com/hardingliu/dal-cs5308.git`
 
-Then cd into the A1 directory: `cd assignments/A1`
+Then cd into the A1 directory: `cd dal-cs5308/A1/`
 
 To build a jar: `mvn package`
 
