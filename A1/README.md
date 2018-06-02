@@ -29,6 +29,6 @@ To clean the build: `mvn clean`
 I did not write unit tests for the *DOMGenerator* class, since the methods of that class will
 be called according to different cases of the returned XML file. For example, if the deliveryaddress
 is invalid, the method to generate a DOM object for that case will be called. All the methods for
-handling different cases are tested, thus, to me, it seems that there is no need to write tests for the
+handling different cases are tested. Thus, to me, it seems that there is no need to write tests for the
 *DOMGenerator*. Besides, the methods of that class all return a DOM object, which is hard to test
 as well, at least in my opinion.
