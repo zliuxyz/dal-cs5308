@@ -66,3 +66,6 @@ fabric.properties
 # Ignore pdf or txt files
 *.pdf
 *.txt
+
+# Ignore generated OrderResponse.xml
+OrderResponse.xml
