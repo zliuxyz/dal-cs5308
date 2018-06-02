@@ -67,7 +67,9 @@ public class App {
             if (returnedDoc == null) {
                 IOrderFormatValidation orderFormatValidation = new OrderFormatValidation();
                 IOrderFormatValidation.OrderFormatResponse response = orderFormatValidation.isOrderFormatValid(incomingDoc);
-                if (response == IOrderFormatValidation.OrderFormatResponse.INVALID_DELIVERY_ADDRESS) {
+                if (response == IOrderFormatValidation.OrderFormatResponse.INVALID_TAG) {
+                    returnedDoc = domGenerator.getInvalidTagXMLDOM();
+                } else if (response == IOrderFormatValidation.OrderFormatResponse.INVALID_DELIVERY_ADDRESS) {
                     returnedDoc = domGenerator.getInvalidAddressDOM();
                 } else if (response == IOrderFormatValidation.OrderFormatResponse.INVALID_ORDER_ITEM_ENTRY) {
                     returnedDoc = domGenerator.getInvalidItemEntryDOM();

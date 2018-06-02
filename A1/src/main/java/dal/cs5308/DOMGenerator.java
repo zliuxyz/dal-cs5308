@@ -34,6 +34,24 @@ public class DOMGenerator implements IDOMGenerator {
     }
 
     @Override
+    public Document getInvalidTagXMLDOM() {
+        Document document = documentBuilder.newDocument();
+        Element root = document.createElement("order");
+        document.appendChild(root);
+
+        Element result = document.createElement("result");
+        result.appendChild(document.createTextNode("failure"));
+        root.appendChild(result);
+
+        Element error = document.createElement("error");
+        error.appendChild(document.createTextNode("XML contains invalid tags"));
+        root.appendChild(error);
+
+        return document;
+
+    }
+
+    @Override
     public Document getUnAuthorizedDealerDOM() {
         Document document = documentBuilder.newDocument();
         Element root = document.createElement("order");

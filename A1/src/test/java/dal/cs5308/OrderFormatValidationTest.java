@@ -91,6 +91,14 @@ public class OrderFormatValidationTest {
         assertTrue(response == OrderFormatResponse.INVALID_ORDER_ITEM_LIST);
     }
 
+    @Test
+    public void InvalidTag() throws IOException, SAXException {
+        Document incomingDoc = db.parse(new File("test-files/InvalidTag.xml"));
+        OrderFormatResponse response = iOrderFormatValidation.isOrderFormatValid(incomingDoc);
+        assertTrue(response == OrderFormatResponse.INVALID_TAG);
+    }
+
+
     @After
     public void testTearDown() {
         iOrderFormatValidation = null;

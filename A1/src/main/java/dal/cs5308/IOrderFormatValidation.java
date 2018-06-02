@@ -7,6 +7,7 @@ public interface IOrderFormatValidation {
         INVALID_DELIVERY_ADDRESS,
         INVALID_ORDER_ITEM_LIST,
         INVALID_ORDER_ITEM_ENTRY,
+        INVALID_TAG,
         VALID_ORDER_FORMAT
     }
 

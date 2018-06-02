@@ -9,20 +9,20 @@ public class OrderFormatValidation implements IOrderFormatValidation {
     @Override
     public OrderFormatResponse isOrderFormatValid(Document incomingDoc) {
         Element orderElement = incomingDoc.getDocumentElement();
-//        if (!orderElement.getTagName().equals("order")) {
-////            return false;
-////        }
+        if (!orderElement.getTagName().equals("order")) {
+            return OrderFormatResponse.INVALID_TAG;
+        }
 
-//        String[] tagsInsideOrder = {"dealer", "orderitems", "deliveryaddress"};
-//        if (!validateANode(orderElement, tagsInsideOrder)) {
-//            return false;
-//        }
+        String[] tagsInsideOrder = {"dealer", "orderitems", "deliveryaddress"};
+        if (!validateANode(orderElement, tagsInsideOrder)) {
+            return OrderFormatResponse.INVALID_TAG;
+        }
 
-//        String[] tagsInsideDealer = {"dealerid", "dealeraccesskey"};
-//        Node insideDealerNode = orderElement.getElementsByTagName("dealer").item(0);
-//        if (!validateANode(insideDealerNode, tagsInsideDealer)) {
-//            return false;
-//        }
+        String[] tagsInsideDealer = {"dealerid", "dealeraccesskey"};
+        Node insideDealerNode = orderElement.getElementsByTagName("dealer").item(0);
+        if (!validateANode(insideDealerNode, tagsInsideDealer)) {
+            return OrderFormatResponse.INVALID_TAG;
+        }
 
         Node insideOrderItemsNode = orderElement.getElementsByTagName("orderitems").item(0);
         Node item = insideOrderItemsNode.getFirstChild();

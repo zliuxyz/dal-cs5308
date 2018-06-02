@@ -6,6 +6,8 @@ public interface IDOMGenerator {
 
     Document getInvalidXMLDOM();
 
+    Document getInvalidTagXMLDOM();
+
     Document getUnAuthorizedDealerDOM();
 
     Document getInvalidAddressDOM();
