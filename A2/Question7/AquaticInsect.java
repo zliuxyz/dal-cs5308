@@ -1,17 +1,10 @@
-public class AquaticInsect implements IInsect
-{
-	public void Swim()
-	{
-		System.out.println("Sploosh!");
-	}
+public class AquaticInsect implements IAquaticInsect {
 
-	public void Fly()
-	{
-		// I can't fly I swim!
-	}
+    public void swim() {
+        System.out.println("Sploosh!");
+    }
 
-	public void MoveAntennae()
-	{
-		System.out.println("Moving my antennae underwater!");
-	}
+    public void moveAntennae() {
+        System.out.println("Moving my antennae underwater!");
+    }
 }
