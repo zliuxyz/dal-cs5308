@@ -1,29 +1,24 @@
 import java.time.Duration;
 import java.util.ArrayList;
 
-public class DVD implements ILibraryItem
+public class DVD implements IDVDItem
 {
-	public Duration GetPlayTime()
+	public Duration getPlayTime()
 	{
 		return Duration.ofMinutes(135);
 	}
 
-	public String GetAuthor()
-	{
-		return null;
-	}
-
-	public String GetTitle()
+	public String getTitle()
 	{
 		return "Solo: A Star Wars Story";
 	}
 
-	public boolean IsDigitalOnly()
+	public boolean isDigitalOnly()
 	{
 		return false;
 	}
 
-	public ArrayList<String> GetCastList()
+	public ArrayList<String> getCastList()
 	{
 		ArrayList<String> cast = new ArrayList<String>();
 		cast.add("Alden Ehrenreich");
