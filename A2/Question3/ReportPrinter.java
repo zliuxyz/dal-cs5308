@@ -16,7 +16,7 @@ import javax.print.event.PrintJobEvent;
 import java.util.ArrayList;
 
 public class ReportPrinter {
-    public static void SendToPrinter(ArrayList<String> reportData) {
+    public static void sendToPrinter(ArrayList<String> reportData) {
         try {
             String defaultPrinter = PrintServiceLookup.lookupDefaultPrintService().getName();
             PrintService service = PrintServiceLookup.lookupDefaultPrintService();
