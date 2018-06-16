@@ -1,4 +1,4 @@
-public class Mexico
+public class Mexico implements Country
 {
 	public String getAgriculture()
 	{

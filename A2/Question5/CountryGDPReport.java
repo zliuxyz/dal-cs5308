@@ -1,7 +1,7 @@
 public class CountryGDPReport
 {
-	Canada canada;
-	Mexico mexico;
+	Country canada;
+	Country mexico;
 
 	public CountryGDPReport()
 	{

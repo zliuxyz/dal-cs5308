@@ -1,4 +1,4 @@
-public class Canada
+public class Canada implements Country
 {
 	public String getAgriculture()
 	{
