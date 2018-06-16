@@ -1,19 +1,14 @@
-public class BankAccount
-{
-	protected float balance;
+public class BankAccount extends AbstractBankAccount {
 
-	public float GetBalance()
-	{
-		return balance;
-	}
+    public float getBalance() {
+        return balance;
+    }
 
-	public void Credit(float amount)
-	{
-		balance += amount;
-	}
+    public void credit(float amount) {
+        balance += amount;
+    }
 
-	public void Debit(float amount)
-	{
-		balance -= amount;
-	}
+    public void debit(float amount) {
+        balance -= amount;
+    }
 }

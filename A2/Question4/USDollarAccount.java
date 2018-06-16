@@ -1,14 +1,16 @@
-public class USDollarAccount extends BankAccount
-{
-	static final float EXCHANGE_RATE = 0.75f;
+public class USDollarAccount extends AbstractBankAccount {
 
-	public void Credit(float amount)
-	{
-		balance += amount * EXCHANGE_RATE;
-	}
+    static final float EXCHANGE_RATE = 0.75f;
 
-	public void Debit(float amount)
-	{
-		balance -= amount * EXCHANGE_RATE;
-	}
+    public float getBalance() {
+        return balance;
+    }
+
+    public void credit(float amount) {
+        balance += amount * EXCHANGE_RATE;
+    }
+
+    public void debit(float amount) {
+        balance -= amount * EXCHANGE_RATE;
+    }
 }
