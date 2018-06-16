@@ -1,3 +1,5 @@
+## Q7
+
 1. The code violates the "Liskov Substitution Principle"
 
 2. The "Liskov Substitution Principle" states that objects in a program should be replaceable with
