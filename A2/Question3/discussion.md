@@ -1,3 +1,5 @@
+## Q3
+
 1. The code violates "Single Responsibility Principle"
 
 2. The "Single Responsibility Principle" states that a class should only have a single responsibility,
