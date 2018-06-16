@@ -1,6 +1,6 @@
 ## Q1
 
-1. The Employer class violates the "dependency inversion principle".
+1. The code violates the "dependency inversion principle".
 
 2. According to the "dependency inversion principle", we know that high level modules should not
    depend on low level modules. Both of them should depend on abstractions. Also, abstraction
