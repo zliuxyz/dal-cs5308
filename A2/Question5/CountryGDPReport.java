@@ -1,22 +1,20 @@
-public class CountryGDPReport
-{
-	Country canada;
-	Country mexico;
+import java.util.ArrayList;
 
-	public CountryGDPReport()
-	{
-		canada = new Canada();
-		mexico = new Mexico();
-	}
+public class CountryGDPReport {
+    ArrayList<Country> countries;
 
-	public void PrintCountryGDPReport()
-	{
-		System.out.println("GDP By Country:\n");
-		System.out.println("- Canada:\n");
-		System.out.println("   - Agriculture: " + canada.getAgriculture());
-		System.out.println("   - Manufacturing: " + canada.getManufacturing());
-		System.out.println("- Mexico:\n");
-		System.out.println("   - Agriculture: " + mexico.getAgriculture());
-		System.out.println("   - Tourism: " + mexico.getTourism());
-	}
+    public CountryGDPReport() {
+        countries = new ArrayList<>();
+        countries.add(new Canada());
+        countries.add(new Mexico());
+    }
+
+    public void printCountryGDPReport() {
+        System.out.println("GDP By Country:\n");
+        for (int i = 0; i < countries.size(); i++) {
+            System.out.println("- " + countries.get(i).getName() + ":\n");
+            System.out.println("   - Agriculture: " + countries.get(i).getAgriculture());
+            System.out.println("   - Manufacturing: " + countries.get(i).getManufacturing());
+        }
+    }
 }
