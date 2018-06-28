@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 
 // Implementation of the Abstract Factory pattern's interface
