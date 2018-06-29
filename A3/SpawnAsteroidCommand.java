@@ -12,6 +12,13 @@ public class SpawnAsteroidCommand extends Command {
         int height = Integer.parseInt(args[2]);
         IAsteroidGameFactory factory = GameBoard.Instance().GetFactory();
         System.out.println("Spawning asteroid at (" + args[0] + "," + args[1] + ") with height = " + height);
-        square.Add(factory.MakeAsteroid(height));
+        Asteroid asteroid = factory.MakeAsteroid(height);
+        for (Building building : square.getBuildings()) {
+            asteroid.addObserver(building);
+        }
+        if (square instanceof Shield) {
+            asteroid.addObserver((Shield) square);
+        }
+        square.Add(asteroid);
     }
 }
